@@ -1,42 +1,25 @@
-export default function Panel({ activeSection }) {
-  function renderContent() {
-    switch (activeSection) {
-      case "character":
-        return (
-          <>
-            <h2>CHARACTER PROFILE</h2>
-            <p>Estudante de Engenharia de Software.</p>
-          </>
-        );
+import Apresentacao from "../sections/Apresentacao";
+import Character from "../sections/Character";
+import Inventory from "../sections/Inventory";
+import Journal from "../sections/Journal";
+import Map from "../sections/Map";
 
-      case "inventory":
-        return (
-          <>
-            <h2>INVENTORY</h2>
-            <p>C# | .NET | SQL | Unity</p>
-          </>
-        );
+const sections = {
+  Apresentação: <Apresentacao />,
+  inventory: <Inventory />,
+  map: <Map />,
+  character: <Character />,
+  journal: <Journal />,
+};
 
-      case "quests":
-        return (
-          <>
-            <h2>QUEST LOG</h2>
-            <p>Experiência em suporte técnico.</p>
-          </>
-        );
-
-      case "shards":
-        return (
-          <>
-            <h2>SHARDS</h2>
-            <p>Projetos e links do GitHub.</p>
-          </>
-        );
-
-      default:
-        return <p>System Error</p>;
-    }
-  }
-
-  return <div className="panel">{renderContent()}</div>;
+export default function Panel({ activeSection, onClose }) {
+  return (
+    <div className="panel">
+      <div className="panel-header">
+        <span className="panel-title">{activeSection.toUpperCase()}</span>
+        <span className="panel-close" onClick={onClose}>[ESC] CLOSE</span>
+      </div>
+      {sections[activeSection]}
+    </div>
+  );
 }

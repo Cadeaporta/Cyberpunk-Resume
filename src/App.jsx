@@ -4,13 +4,20 @@ import Menu from "./components/Menu";
 import Panel from "./components/Panel";
 
 function App() {
-  const [activeSection, setActiveSection] = useState("inventory");
+  const [active, setActive] = useState(null);
 
   return (
     <div className="app">
       <Header />
-      <Menu active={activeSection} setActive={setActiveSection} />
-      <Panel activeSection={activeSection} />
+      <div className="main">
+        <Menu active={active} setActive={setActive} />
+        {active && <Panel activeSection={active} onClose={() => setActive(null)} />}
+      </div>
+      <footer className="hud-footer">
+        <span>MODEL LINE // 1.2001A</span>
+        <span>PHASE NAME: GUILHERME.ALV.EXE</span>
+        <span>TASK_MANAGER_0116</span>
+      </footer>
     </div>
   );
 }
