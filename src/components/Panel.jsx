@@ -1,12 +1,12 @@
 import Apresentacao from "../sections/Apresentacao";
 import Character from "../sections/Character";
-import Inventory from "../sections/Inventory";
+import Skills from "../sections/skills";
 import Journal from "../sections/Journal";
-import Map from "../sections/Map";
+import Map from "../sections/map";
 
 const sections = {
   Apresentação: <Apresentacao />,
-  inventory: <Inventory />,
+  Skills: <Skills />,
   map: <Map />,
   character: <Character />,
   journal: <Journal />,
