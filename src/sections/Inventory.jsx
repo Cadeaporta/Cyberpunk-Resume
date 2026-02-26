@@ -1,9 +1,7 @@
 const skills = [
-  { name: "C# / .NET", level: 70 },
-  { name: "Unity", level: 55 },
-  { name: "React / JS", level: 60 },
-  { name: "SQL", level: 50 },
-  { name: "Git", level: 65 },
+  { name: "C# / .NET", level: 15 },
+  { name: "SQL", level: 15 },
+  { name: "Git", level: 20 },
 ];
 
 export default function Inventory() {
