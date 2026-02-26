@@ -1,6 +1,7 @@
 const links = [
   { label: "GITHUB", url: "https://github.com/Cadeaporta" },
   { label: "LINKEDIN", url: "https://www.linkedin.com/in/guilherme-alves-0a523b37b/" },
+  { label: "WHATSAPP", url: "wa.me/19978172933"},
 ];
 
 export default function Map() {

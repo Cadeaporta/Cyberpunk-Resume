@@ -1,9 +1,9 @@
 const buttons = [
   { id: "Apresentação", icon: "◈" },
-  { id: "inventory",    icon: "⊞" },
-  { id: "map",          icon: "◎" },
   { id: "character",    icon: "⊙" },
+  { id: "skills",       icon: "⊞" },
   { id: "journal",      icon: "≡" },
+  { id: "map",          icon: "◎" },
 ];
 
 export default function Menu({ active, setActive }) {

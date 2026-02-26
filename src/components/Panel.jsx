@@ -1,15 +1,15 @@
 import Apresentacao from "../sections/Apresentacao";
 import Character from "../sections/Character";
-import Skills from "../sections/skills";
+import Inventory from "../sections/Inventory";
 import Journal from "../sections/Journal";
-import Map from "../sections/map";
+import Map from "../sections/Map";
 
 const sections = {
   Apresentação: <Apresentacao />,
-  Skills: <Skills />,
-  map: <Map />,
   character: <Character />,
+  skills: <Inventory />,
   journal: <Journal />,
+  map: <Map />,
 };
 
 export default function Panel({ activeSection, onClose }) {
